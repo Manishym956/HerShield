@@ -66,24 +66,24 @@ const Settings: React.FC = () => {
   return (
     <div className="p-4 max-w-md mx-auto">
       <header className="mb-6 pt-4">
-        <h1 className="text-2xl font-bold text-purple-800">Settings</h1>
-        <p className="text-gray-600">Customize your safety preferences</p>
+        <h1 className="text-2xl font-bold text-luxe-sapphire">Settings</h1>
+        <p className="text-luxe-ivory">Customize your safety preferences</p>
       </header>
 
       {settingsSections.map((section, index) => (
-        <div key={index} className="bg-white rounded-xl shadow-md p-4 mb-4">
-          <h2 className="text-lg font-semibold text-gray-800 mb-3">{section.title}</h2>
+        <div key={index} className="bg-luxe-champagne rounded-xl shadow-md p-4 mb-4">
+          <h2 className="text-lg font-semibold text-luxe-sapphire mb-3">{section.title}</h2>
           <div className="space-y-2">
             {section.items.map(item => (
               <div 
                 key={item.id} 
-                className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50"
+                className="flex items-center justify-between p-3 rounded-lg hover:bg-luxe-sapphire-10"
               >
                 <div className="flex items-center">
-                  <div className="bg-purple-100 p-2 rounded-full mr-3">
-                    <item.icon className="h-5 w-5 text-purple-600" />
+                  <div className="bg-luxe-ivory p-2 rounded-full mr-3">
+                    <item.icon className="h-5 w-5 text-luxe-sapphire" />
                   </div>
-                  <span className="text-sm font-medium text-gray-800">{item.label}</span>
+                  <span className="text-sm font-medium text-luxe-sapphire">{item.label}</span>
                 </div>
                 
                 {item.toggle ? (
@@ -92,13 +92,13 @@ const Settings: React.FC = () => {
                     className="focus:outline-none"
                   >
                     {item.value ? (
-                      <ToggleRight className="h-6 w-6 text-purple-600" />
+                      <ToggleRight className="h-6 w-6 text-luxe-sapphire" />
                     ) : (
-                      <ToggleLeft className="h-6 w-6 text-gray-400" />
+                      <ToggleLeft className="h-6 w-6 text-luxe-ivory" />
                     )}
                   </button>
                 ) : (
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                  <ChevronRight className="h-5 w-5 text-luxe-ivory" />
                 )}
               </div>
             ))}
@@ -107,7 +107,7 @@ const Settings: React.FC = () => {
       ))}
 
       <div className="text-center mt-6 mb-4">
-        <button className="text-red-500 font-medium">
+        <button className="text-luxe-rose font-medium">
           Log Out
         </button>
       </div>

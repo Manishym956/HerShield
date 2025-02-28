@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Maps from './pages/Maps';
-import WalkieTalkie from './pages/WalkieTalkie';
-import Settings from './pages/Settings';
-import AIHelper from './pages/AIHelper';
+
+const Home = React.lazy(() => import('./pages/Home'));
+const Maps = React.lazy(() => import('./pages/Maps'));
+const WalkieTalkie = React.lazy(() => import('./pages/WalkieTalkie'));
+const Settings = React.lazy(() => import('./pages/Settings'));
+const AIHelper = React.lazy(() => import('./pages/AIHelper'));
 
 function App() {
   const [activePage, setActivePage] = useState('home');
@@ -27,9 +28,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-luxe-ivory to-luxe-champagne flex flex-col">
       <div className="flex-1 overflow-auto pb-16">
-        {renderPage()}
+        <Suspense fallback={<div className="text-luxe-sapphire">Loading...</div>}>
+          {renderPage()}
+        </Suspense>
       </div>
       <Navbar activePage={activePage} setActivePage={setActivePage} />
     </div>

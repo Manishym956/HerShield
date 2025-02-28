@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white shadow-lg rounded-t-xl">
+    <div className="fixed bottom-0 left-0 right-0 bg-luxe-ivory shadow-lg rounded-t-xl">
       <div className="flex justify-around items-center h-16">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -26,11 +26,11 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
             <button
               key={item.id}
               className={`flex flex-col items-center justify-center w-full h-full transition-colors ${
-                isActive ? 'text-purple-600' : 'text-gray-500'
+                isActive ? 'text-luxe-emerald' : 'text-luxe-onyx'
               }`}
               onClick={() => setActivePage(item.id)}
             >
-              <Icon className={`h-5 w-5 ${isActive ? 'stroke-purple-600' : 'stroke-gray-500'}`} />
+              <Icon className={`h-5 w-5 ${isActive ? 'stroke-luxe-emerald' : 'stroke-luxe-onyx'}`} />
               <span className={`text-xs mt-1 ${isActive ? 'font-medium' : ''}`}>
                 {item.label}
               </span>

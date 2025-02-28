@@ -28,11 +28,11 @@ const AIHelper: React.FC = () => {
   return (
     <div className="flex flex-col h-full">
       <header className="p-4 bg-white shadow-sm">
-        <h1 className="text-xl font-bold text-purple-800 flex items-center">
-          <Bot className="h-6 w-6 mr-2 text-purple-600" />
+        <h1 className="text-xl font-bold text-luxe-sapphire flex items-center">
+          <Bot className="h-6 w-6 mr-2 text-luxe-sapphire" />
           AI Safety Assistant
         </h1>
-        <p className="text-sm text-gray-600">Ask me anything about personal safety</p>
+        <p className="text-sm text-luxe-ivory">Ask me anything about personal safety</p>
       </header>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
@@ -44,17 +44,17 @@ const AIHelper: React.FC = () => {
             <div 
               className={`max-w-[80%] rounded-2xl p-3 ${
                 msg.type === 'user' 
-                  ? 'bg-purple-600 text-white rounded-tr-none' 
-                  : 'bg-white shadow-md rounded-tl-none'
+                  ? 'bg-luxe-sapphire text-luxe-ivory rounded-tr-none' 
+                  : 'bg-luxe-ivory shadow-md rounded-tl-none'
               }`}
             >
               {msg.type === 'ai' && (
                 <div className="flex items-center mb-1">
-                  <Bot className="h-4 w-4 mr-1 text-purple-600" />
-                  <span className="text-xs font-medium text-purple-600">SafeGuardian AI</span>
+                  <Bot className="h-4 w-4 mr-1 text-luxe-sapphire" />
+                  <span className="text-xs font-medium text-luxe-sapphire">SafeGuardian AI</span>
                 </div>
               )}
-              <p className={`text-sm whitespace-pre-line ${msg.type === 'user' ? 'text-white' : 'text-gray-800'}`}>
+              <p className={`text-sm whitespace-pre-line ${msg.type === 'user' ? 'text-luxe-ivory' : 'text-luxe-sapphire'}`}>
                 {msg.text}
               </p>
             </div>
@@ -68,7 +68,7 @@ const AIHelper: React.FC = () => {
             {suggestions.map((suggestion, index) => (
               <button 
                 key={index}
-                className="px-3 py-2 bg-purple-50 text-purple-700 rounded-full text-sm whitespace-nowrap"
+                className="px-3 py-2 bg-luxe-sapphire-10 text-luxe-sapphire rounded-full text-sm whitespace-nowrap"
                 onClick={() => setMessage(suggestion)}
               >
                 {suggestion}
@@ -77,27 +77,27 @@ const AIHelper: React.FC = () => {
           </div>
         </div>
         
-        <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
+        <div className="flex items-center bg-luxe-ivory rounded-full px-4 py-2">
           <input
             type="text"
             placeholder="Ask me anything about safety..."
-            className="bg-transparent border-none outline-none flex-1 text-gray-800 text-sm"
+            className="bg-transparent border-none outline-none flex-1 text-luxe-sapphire text-sm"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSend()}
           />
           <div className="flex space-x-2">
-            <button className="p-2 text-gray-500">
+            <button className="p-2 text-luxe-sapphire">
               <Mic className="h-5 w-5" />
             </button>
-            <button className="p-2 text-gray-500">
+            <button className="p-2 text-luxe-sapphire">
               <Image className="h-5 w-5" />
             </button>
-            <button className="p-2 text-gray-500">
+            <button className="p-2 text-luxe-sapphire">
               <MapPin className="h-5 w-5" />
             </button>
             <button 
-              className={`p-2 rounded-full ${message.trim() ? 'bg-purple-600 text-white' : 'text-gray-400'}`}
+              className={`p-2 rounded-full ${message.trim() ? 'bg-luxe-sapphire text-luxe-ivory' : 'text-luxe-ivory'}`}
               onClick={handleSend}
               disabled={!message.trim()}
             >
