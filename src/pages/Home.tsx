@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           <div className="bg-luxe-ivory p-3 rounded-full mb-2">
             <Bell className="h-6 w-6 text-luxe-sapphire" />
           </div>
-          <span className="text-sm font-medium text-luxe-onyx">Alerts</span>
+          <span className="text-sm font-medium text-luxe-onyx">Help Siren</span>
         </div>
         
         <div className="bg-luxe-champagne p-4 rounded-xl shadow-sm flex flex-col items-center">
@@ -54,30 +54,9 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-luxe-ivory rounded-xl shadow-md p-4 mb-4">
-        <h2 className="text-lg font-semibold text-luxe-onyx mb-3">Recent Activity</h2>
-        <div className="space-y-3">
-          <div className="flex items-start">
-            <div className="bg-luxe-cream rounded-full p-2 mr-3">
-              <Bell className="h-4 w-4 text-luxe-onyx" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-luxe-onyx">Safety check completed</p>
-              <p className="text-xs text-luxe-onyx">Today, 2:30 PM</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="bg-luxe-cream rounded-full p-2 mr-3">
-              <Users className="h-4 w-4 text-luxe-onyx" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-luxe-onyx">Added new trusted contact</p>
-              <p className="text-xs text-luxe-onyx">Yesterday, 6:15 PM</p>
-            </div>
-          </div>
+     
         </div>
-      </div>
-    </div>
+     
   );
 };
 
