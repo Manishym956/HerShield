@@ -8,11 +8,13 @@ const Maps: React.FC = () => {
     <div className="relative h-full">
       {/* Map placeholder */}
       <div className="h-full bg-luxe-champagne relative">
+       
         <img 
           src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
           alt="Map" 
           className="w-full h-full object-cover"
         />
+      
         
         {/* Current location marker */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

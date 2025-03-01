@@ -25,7 +25,7 @@ const WalkieTalkie: React.FC = () => {
           <div className="w-20 h-20 bg-luxe-emerald rounded-full flex items-center justify-center mx-auto mb-4">
             <User className="h-10 w-10 text-white" />
           </div>
-          <h2 className="text-xl font-bold text-luxe-onyx mb-1">Emergency Services</h2>
+          <h2 className="text-xl font-bold text-luxe-onyx mb-1"> {}</h2>
           <p className="text-sm text-luxe-onyx mb-6">Connected - 00:32</p>
           
           <div className="flex justify-center space-x-6 mb-6">
@@ -58,7 +58,7 @@ const WalkieTalkie: React.FC = () => {
           </div>
           
           <p className="text-sm text-luxe-onyx italic">
-            "Your location is being shared during this call"
+            
           </p>
         </div>
       ) : (

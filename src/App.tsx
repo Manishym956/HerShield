@@ -1,7 +1,7 @@
 import React, { useState, Suspense } from 'react';
 import Navbar from './components/Navbar';
 
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/Home')); 
 const Maps = React.lazy(() => import('./pages/Maps'));
 const WalkieTalkie = React.lazy(() => import('./pages/WalkieTalkie'));
 const Settings = React.lazy(() => import('./pages/Settings'));

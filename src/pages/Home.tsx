@@ -33,10 +33,13 @@ const Home: React.FC = () => {
         </div>
         
         <div className="bg-luxe-champagne p-4 rounded-xl shadow-sm flex flex-col items-center">
-          <div className="bg-luxe-ivory p-3 rounded-full mb-2">
+          <button className="bg-luxe-ivory p-3 rounded-full mb-2">
             <Bell className="h-6 w-6 text-luxe-sapphire" />
-          </div>
+          </button>
+   
           <span className="text-sm font-medium text-luxe-onyx">Help Siren</span>
+     
+          
         </div>
         
         <div className="bg-luxe-champagne p-4 rounded-xl shadow-sm flex flex-col items-center">
