@@ -10,7 +10,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
     { id: 'maps', label: 'Maps', icon: Map, link: 'https://golden-lamington-c3e5f0.netlify.app/' },
-    { id: 'walkieTalkie', label: 'Walkie Talkie', icon: Radio },
+    { id: 'walkieTalkie', label: 'Help Siren', icon: Radio },
     { id: 'settings', label: 'Settings', icon: Settings },
     { id: 'aiHelper', label: 'AI Helper', icon: Bot },
   ];
